@@ -24,7 +24,6 @@ define(['jquery'],function($,require,exports,module){
        //Rendering
        topIndex.css('z-index','10000');
        topIndex.css('width','100%');
-       topIndex.css('height','50px');
        //Font
 
        var background = topIndex.find("#indexTopBar-background");
@@ -37,7 +36,7 @@ define(['jquery'],function($,require,exports,module){
        background.css('width','100%');
        background.css('background','#000000');
        background.css('opacity','0.5');
-       background.css('height','50px');
+       background.css('height','100px');
        
        text.css('position','absolute');
        text.css('left','3px');
@@ -50,4 +49,5 @@ define(['jquery'],function($,require,exports,module){
 
        topIndex.hide();
        topIndex.slideDown(500);
+       
     });

@@ -8,4 +8,4 @@
  })();
 /*merge end*/
 /*!!cmd:compress=true*/
-ImportJavscript.url('scripts/app/index/top.js');
+ImportJavscript.url('scripts/app/index/init.js');
