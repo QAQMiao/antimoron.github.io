@@ -8,8 +8,8 @@
 	<div id="numberScroll"></div>
 
 	<script type="text/javascript">
-	var limitTime = 100; //milliSeconds
-	var goalNum = 121231233;	//the final num
+	var limitTime = 1000; //milliSeconds
+	var goalNum = 10;	//the final num
 	var startNum = 0;
 	var textSize = 30;		//size of text
 	var temNum = startNum;	//起始金额
@@ -22,21 +22,26 @@
 	}
 		numberScroll.style.fontSize = textSize;
 		numberScroll.innerHTML = temNum;
-	
+	var oldDate = new Date().getTime();
 	var intervalId = setInterval(function(){
-		numberScroll.innerHTML = temNum.toFixed(2);
-		temNum += increamentNum;
+		var newDate = new Date().getTime();
+		temNum += (newDate - oldDate) * increamentNum;
 		if(increament){
 			if(temNum >= goalNum) {
-				clearInterval(intervalId);
-				numberScroll.innerHTML = goalNum;
+				temNum = goalNum;
 			}
 		} else {
 			if(temNum <= goalNum) {
+				temNum = goalNum;
+			}
+		}
+		numberScroll.innerHTML = temNum.toFixed(2);
+		oldDate = newDate;
+		if(temNum === goalNum) {
 				clearInterval(intervalId);
 				numberScroll.innerHTML = goalNum;
-			}
-		}},1);
+		}
+		},1);
 	</script>
 </body>
 
