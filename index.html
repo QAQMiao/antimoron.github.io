@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<!-- @Author AntiMoron -->
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Home page of AntiMoron</title>
-    <script data-main="scripts/app/main" src="scripts/lib/require.js"></script>
-    <script src="scripts/lib/jquery.js"></script>
-    <script src="scripts/app/merge.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/index/top.css"></script>
+	<title>A numeric test</title>
 </head>
+
+
 <body>
-<!--    <div class="index-background"></div>-->
-    <iframe src="footer.html" frameborder="0" scrolling="no" width="100%" style="z-index:1"></iframe>
+	<div id="numberScroll"></div>
+
+	<script type="text/javascript">
+	var limitTime = 100; //milliSeconds
+	var goalNum = 123;	//the final num
+	var increament = false;	//whether the animation is increasing of not.
+	var textSize = 30;		//size of text
+	var temNum = increament ? 0 : (1.2 * goalNum);	//起始金额
+	temNum = eval(temNum.toFixed(2));
+	var increamentNum = (goalNum - temNum) / limitTime;
+	var numberScroll = document.getElementById("numberScroll");
+	if(numberScroll === null) {
+		console.log("No Element Found");
+	}
+		numberScroll.style.fontSize = textSize;
+		numberScroll.innerHTML = temNum;
+	
+	var intervalId = setInterval(function(){
+		numberScroll.innerHTML = temNum.toFixed(2);
+		temNum += increamentNum;
+		if(increament){
+			if(temNum >= goalNum) {
+				clearInterval(intervalId);
+				numberScroll.innerHTML = goalNum;
+			}
+		} else {
+			if(temNum <= goalNum) {
+				clearInterval(intervalId);
+				numberScroll.innerHTML = goalNum;
+			}
+		}},1);
+	</script>
 </body>
+
 </html>
