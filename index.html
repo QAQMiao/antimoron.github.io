@@ -9,10 +9,11 @@
 
 	<script type="text/javascript">
 	var limitTime = 100; //milliSeconds
-	var goalNum = 123;	//the final num
-	var increament = false;	//whether the animation is increasing of not.
+	var goalNum = 121231233;	//the final num
+	var startNum = 0;
 	var textSize = 30;		//size of text
-	var temNum = increament ? 0 : (1.2 * goalNum);	//起始金额
+	var temNum = startNum;	//起始金额
+	var increament = (goalNum - startNum) > 0;
 	temNum = eval(temNum.toFixed(2));
 	var increamentNum = (goalNum - temNum) / limitTime;
 	var numberScroll = document.getElementById("numberScroll");
