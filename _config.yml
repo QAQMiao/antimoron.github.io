@@ -4,9 +4,9 @@ email: anti2moron@gmail.com
 description: >
   AntiMoron's blog. AntiMoron is just a normal guy who knows how to program.
   #For more info about the author just check this page.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://antimoron.github.io" # the base hostname & protocol for your site
+baseurl: "/blog/"
+url: "http://antimoron.github.io"
 github_username: antimoron
-
+facebook_username: Boyuan Gao
 # Build settings
 markdown: kramdown

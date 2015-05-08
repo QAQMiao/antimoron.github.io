@@ -4,8 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi guys.My nickname on the Internet is AntiMoron.
+My Real Name is ```Boyuan Gao```.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I'm just a normal guy who knows how to program.
+I like to share my ideas with people who're like me.
+My favorite thing is to code in a quiet environment.
+FYI, other things about me.
+- Like sweet food.
+- Love getting knowing people.
+- Good at playing video games.
+- Trying to write an simple game engine recently.[ https://github.com/AntiMoron/aMazing ].
+- I had a girl that I really love.
