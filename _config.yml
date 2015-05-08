@@ -7,6 +7,6 @@ description: >
 baseurl: "/blog/"
 url: "http://antimoron.github.io"
 github_username: antimoron
-facebook_username: Boyuan Gao
+facebook_username: BoyuanGao
 # Build settings
 markdown: kramdown
