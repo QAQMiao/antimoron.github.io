@@ -93,7 +93,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($highlight-color, 15%);
+        color: darken($grey-color-light, 15%);
     }
 
     &:hover {
@@ -152,7 +152,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow: auto;;
+    overflow: auto;
 
     > code {
         border: 0;
