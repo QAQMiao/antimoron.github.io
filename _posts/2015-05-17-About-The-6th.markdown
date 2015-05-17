@@ -1,8 +1,8 @@
-﻿--- 
-layout: post
-title:  "About the 6th"
-date:   2015-05-17 13:10:16
-categories: dailyTime
+--- 
+layout: post 
+title:  "About the 6th" 
+date:   2015-05-17 13:10:16 
+categories: dailyTime 
 --- 
 
 # 关于silly b的老六语录
