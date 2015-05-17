@@ -11,3 +11,4 @@ qzone_username: 1826553622
 facebook_username: boyuan.gao.7
 # Build settings
 markdown: kramdown
+encoding: gbk 
