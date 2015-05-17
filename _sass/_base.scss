@@ -89,11 +89,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $grey-color-light;
+    color: #cccccc;
     text-decoration: none;
 
     &:visited {
-        color: darken($grey-color-light, 15%);
+        color: darken(#cccccc, 15%);
     }
 
     &:hover {
@@ -107,7 +107,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken(#cc0000, 35%);
+        color: darken($grey-color-light, 35%);
     }
 
     &:hover {
