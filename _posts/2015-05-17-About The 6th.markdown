@@ -2,7 +2,7 @@
 layout: post
 title:  "About the 6th"
 date:   2015-05-08 09:12:16
-categories: daily life
+categories: dailylife
 ---
 
 # 关于silly b的老六语录
