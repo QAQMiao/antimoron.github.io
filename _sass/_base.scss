@@ -89,11 +89,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $highlight-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($highlight-color, 15%);
     }
 
     &:hover {
@@ -102,6 +102,19 @@ a {
     }
 }
 
+.footer link{
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($footer-link-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
 
 
 /**
