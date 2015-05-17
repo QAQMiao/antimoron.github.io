@@ -10,10 +10,10 @@ categories: dailyTime
 要用一种语言来描述老六，也只有javascript了，哈哈哈哈
 
 
-```javascript
-liu666 = "silly B";
+{% highlight javascript linenos %}	
+liu666 = "silly B"; //变量悬挂HHHHHHH.
 var liu666;
-```
+{% endhighlight %}
 
 老六这两天说点语录：
 

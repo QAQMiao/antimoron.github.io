@@ -1,8 +1,13 @@
 /**
  * Syntax highlighting styles
  */
+.lineno {
+	color : #ffffff;
+	background: $grey-color;
+}
+ 
 .highlight {
-    background: #000000;
+	background-color:#000000;
     @extend %vertical-rhythm;
 
     .c     { color: #998; font-style: italic } // Comment
@@ -26,10 +31,10 @@
     .gu    { color: #aaa } // Generic.Subheading
     .gt    { color: #a00 } // Generic.Traceback
     .kc    { font-weight: bold } // Keyword.Constant
-    .kd    { font-weight: bold } // Keyword.Declaration
-    .kp    { font-weight: bold } // Keyword.Pseudo
-    .kr    { font-weight: bold } // Keyword.Reserved
-    .kt    { color: #458; font-weight: bold } // Keyword.Type
+    .kd    { color: $keyword-color;font-weight: bold } // Keyword.Declaration
+    .kp    { color: $keyword-color;font-weight: bold } // Keyword.Pseudo
+    .kr    { color: $keyword-color;font-weight: bold } // Keyword.Reserved
+    .kt    { color: $keyword-color;color: #458; font-weight: bold } // Keyword.Type
     .m     { color: #099 } // Literal.Number
     .s     { color: #d14 } // Literal.String
     .na    { color: #008080 } // Name.Attribute

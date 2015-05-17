@@ -142,8 +142,8 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border-radius: 5px;
+    background-color: #222222;
 }
 
 code {
@@ -152,7 +152,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow: auto;;
 
     > code {
         border: 0;
