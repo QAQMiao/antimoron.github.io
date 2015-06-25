@@ -36,3 +36,4 @@ categories: technology
 的介绍（例如：Petri-nets和temporal逻辑）。对于想要进行更长远的阅读在第7章
 会给出一些其他内容的链接。
 
+![overview]({{site.url}}/assets/semantics-with-apps-resources/Preface-overview.png)
