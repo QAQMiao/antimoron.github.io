@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title:  "Semantics With Applications Chapter 1" 
+title:  "Semantics With Applications Preface翻译" 
 date:   2015-06-24 16:14:00 
 categories: technology 
 --- 
@@ -63,3 +63,7 @@ categories: technology
 附录B、C和D包含用函数式语言Miranda的某些语义说明的实现。目的是在于用语义定义提高经常被认为简洁巨大的形式体系的素材的理解的实验的能力。
 它应该可以在任何函数式语言里重现这些实现，但是如果一个热门语言（像标准ML）被使用了，对于实现定点结合子的实现就一定要注意许多地方了。
 不管怎样，如果这些附录被忽略并不会影响内容的连续性。
+
+## Notes for the instructor 导读
+读者应该较好地了解BNF风格指明编程语言的语法并应该熟悉大多数在附录A列出的数学概念。
+为了领会附录中的原型实现读者应该有一定的函数式编程经验。我们自己使用这本书作为在Aarhus大学的本科生课程。
