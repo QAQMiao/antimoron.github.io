@@ -15,5 +15,7 @@ FYI, other things about me.
 - Like sweet food.
 - Love getting knowing people.
 - Good at playing video games.
-- Trying to write an simple game engine recently.[ https://github.com/AntiMoron/aMazing ].
-- I had a girl that I really love.
+- Trying to write an simple game engine recently.<a href="https://github.com/AntiMoron/aMazing">aMazing</a>.
+- I have a girl that I really love.
+
+![That's us!]({{site.url}}/assets/about/Us.jpg)
