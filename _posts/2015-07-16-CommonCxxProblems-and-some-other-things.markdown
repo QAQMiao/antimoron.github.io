@@ -147,10 +147,12 @@ ref const& r = x;
 {% endhighlight %}
 
 C++11, by contrast, introduces the following reference collapsing rules1:
+{% highlight c++ linenos%}
 A& & becomes A&
 A& && becomes A&
 A&& & becomes A&
 A&& && becomes A&&
+{% endhighlight %}
 
 这个规则是正确的，但是不够完整。 参考Item28 : <a href="http://www.aristeia.com/BookErrata/emc++-errata.html">emc++-errata</a>
 
