@@ -5,7 +5,7 @@ date:   2015-07-15 21:06:00
 categories: technology 
 --- 
 
-##Compile the code first
+##Compile the Code First
 I built a codeblocks empty project on windows 7 and added all source files into it.
 And pressed F9 button to try to compile the source codes,it failed.
 
@@ -21,3 +21,6 @@ I removed the older files.
 
 - Finally it compiles.
 ![result]({{site.url}}/assets/lua-source-code/luaFromCompileMingw.png)
+
+##Start from ```main```
+At 
