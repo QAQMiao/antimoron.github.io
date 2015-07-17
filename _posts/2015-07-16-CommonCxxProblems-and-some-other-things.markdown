@@ -123,6 +123,35 @@ Ofcourse sometimes this may led to memory leak if programmer forgets to derefere
 
 Source : Java Memory Management
 
+- 常识：什么是reference collapse
+
+In C++03, it was not legal to do the following
+{% highlight c++ %}
+typedef int &ref;
+ref &r = ...; // reference to reference!
+{% endhighlight %}
+This frequently causes problems for people compiling with really strict or older C++03 compilers (GCC4.1 as well as Comeau 8/4/03 do not like the above) 
+because the Standard function object binders do not take care of the "reference to reference" situation, and occasionally create such illegal types.
+
+In C++0x this is called "reference collapsing", yes. Most current C++03 compilers do that (i.e a T& where T denotes a reference type is T again),
+ by retroactively applying the rule. The boost.call_traits library makes it easy to declare such function parameters though, so that the "reference to reference" 
+ situation does not occur.
+
+Please note that the const there does not have any effect. A const applied on a reference type is silently ignored. 
+So even if the compiler supports reference collapsing, the following is not legal
+{% highlight c++ %}
+int const x = 0;
+
+// illegal: trying to bind "int&" to "int const"!
+ref const& r = x; 
+{% endhighlight %}
+
+C++11, by contrast, introduces the following reference collapsing rules1:
+A& & becomes A&
+A& && becomes A&
+A&& & becomes A&
+A&& && becomes A&&
+
 - 为什么传递Parameter pack的时候需要用rvalue的形式
 
 {% highlight c++ %}
