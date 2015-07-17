@@ -18,4 +18,4 @@ FYI, other things about me.
 - Trying to write an simple game engine recently.<a href="https://github.com/AntiMoron/aMazing">aMazing</a>.
 - I have a girl that I really love.
 
-![That's us!]({{site.url}}/assets/about/Us.jpg)
+![That's us!]({{site.url}}/assets/about/us.jpg)
