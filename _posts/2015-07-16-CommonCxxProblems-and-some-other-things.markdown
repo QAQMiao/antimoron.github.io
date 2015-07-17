@@ -122,3 +122,27 @@ Ofcourse sometimes this may led to memory leak if programmer forgets to derefere
 ![mark-and-sweep algorithm]({{site.url}}/assets/common-faq/markandsweep.png)
 
 Source : Java Memory Management
+
+- 为什么传递Parameter pack的时候需要用rvalue的形式
+
+{% highlight c++ %}
+template<typename... Args>
+void foo(Args&&... args)
+{
+	;//...
+}
+{% endhighlight %}
+参考：<a href="http://stackoverflow.com/questions/13922145/prevent-array-decay-in-parameter-pack-expansion">origin site</a>
+
+Edit: As to why you'd want to do this/why it works: an rvalue reference can bind to either an rvalue or an lvalue. 
+The crucial point we care about here is that when it binds to an lvalue, it remains an lvalue. 
+In the case of an array, it retains its identity as an array, so what's received is an array.
+
+When/if we pass an array by value, it undergoes the normal "decay" to a pointer, just like with a normal function.
+
+For this specific case, we could also use a normal lvalue reference -- but if we did, that would not work for any type that wasn't an lvalue.
+ For example, if we tried to call ```foo(1,2,3);```, we'd get an error because an lvalue reference can't bind to 1, 2 or 3. 
+ To deal with that we could pass a const lvalue reference, but then we wouldn't be binding the reference directly to the rvalue
+ -- we'd be creating a temporary containing a copy of the rvalue that was passed, and then binding the lvalue reference to that temporary copy instead.
+ For the specific case of an int, that probably wouldn't be a major problem, but with something that was more expensive to copy 
+ (or if we wanted access to the original, not a copy) that could be a problem.
