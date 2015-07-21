@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Introduction to Maven"
+date:   2015-05-08 09:12:16
+categories: technology
+---
+## Introduction
+
+- Maven is a project management tool.It includes a project object model,
+a set of standards,a project life cycle,a dependency management system,
+and logics to run and define plugin goal at life cycle phase.
+- Maven is oriented to developtment of java.It offers 
+the superset that build tools required.As well as build function,
+Maven can manage project structure and dependency,generate reports and
+web site,and is good for team members communicate and work with each other.
+- Maven2 archieved the rewriting of Maven1.The rewriting is
+to provide projects that provide powerful building and include
+API,which allows Maven be implanted anywhere,especially high-level
+product such as IDEs,quality tools,report tools and so on.
+Formalization of concepts of Maven2 building life cycle makes
+it easier to be expanded than Maven.
+- Maven3 have large improvement from Maven 2.x in efficiency.
+It can specify parent version automatically,generate paralelly,
+better integrity reports,muti-language generation,better support to 
+M2Eclipse.
+- We ought to use Maven3.
+
+
+--End.
