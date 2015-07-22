@@ -116,5 +116,45 @@ and push forward steadly in developing.
 - Teamwork
 	- easier teamwork
 
+## Maven life cycle
+
+- Three life cycles.
+	1. Clean
+		- pre-clean: some necessary jobs for cleaning.
+		- clean: clean the files that last build generates.
+		- post-clean: executes tasks when clean phase is done.
+	2. Default
+		- validate: check wheter project is right and all necessary informations are valid.
+		- initialize: to initialize build status.
+		- generate-sources:generate all codes for compiling.
+		- process-sources:deal with source codes.
+		- generate-resources: generate resources from packages.
+		- process-resources: copy and process resources to target directory.Get prepared for packaging..
+		- compile:compile main source codes.
+		- process-classes: process the class files after compiling.
+		- generate-test-sources: generate all the test codes.
+		- process-test-sources: process test sources.
+		- generate-test-resources.
+		- process-test-resources.
+		- compile:compile test codes.
+		- process-test-class.
+		- test
+		- prepare-package
+		- package
+		- pre-integration-test
+		- integration-test
+		- post-integration-test
+		- verify
+		- install
+		- deploy
+	3. Site
+		- pre-site
+		- site: generate documents for site.
+		- post-site
+		- site-deploy
+- Phases in one life cycle depends forward and backward.
+
+
+
 
 --End.
