@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Introduction to Maven"
-date:   2015-05-08 09:12:16
+date:   2015-07-21 09:12:16
 categories: technology
 ---
+
 ## Introduction
 
 - Maven is a project management tool.It includes a project object model,
@@ -67,14 +68,14 @@ m2eclipse.
 ## Maven file structure
 
 - bin
-	includes run script, scripts that configure java commands.
+	- includes run script, scripts that configure java commands.
 m2.conf for default repository.
 - boot
-	only one file,java class loader.
+	- only one file,java class loader.
 - conf
-	includes a very important file:```settings.xml```
+	- includes a very important file:```settings.xml```
 - lib
-	Maven needs java class library for runtime.
+	- Maven needs java class library for runtime.
 Maven super POM file is located at ```maven-model-builder-x.x.x.jar```
 
 ### About settings.xml
@@ -100,18 +101,20 @@ activeProfiles: actived profile.
 
 ## Why Maven?
 - Guidance Developing
-	Offers the best development practice.
+	- Offers the best development practice.
 - Auto compile
-	Not only like Ant, it includes tests, packaging , publishing,doc generating,
+	- Not only like Ant, it includes tests, packaging , publishing,doc generating,
 program website generating...
 - Dependency Management
-	Maven can manage dependencies easily.Such as 3rd dependencies,
+	- Maven can manage dependencies easily.Such as 3rd dependencies,
 Model dependencies.
 - Infinite expantions
-	plugin system can enhance Maven.such as Tomcat,Jetty	
+	- plugin system can enhance Maven.such as Tomcat,Jetty	
 - Continuous integration
-	encourage developers commit their codes, find bugs and errors in programs,
+	- encourage developers commit their codes, find bugs and errors in programs,
 and push forward steadly in developing.
 - Teamwork
-	easier teamwork
+	- easier teamwork
+
+
 --End.
