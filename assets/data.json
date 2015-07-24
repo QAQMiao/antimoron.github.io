@@ -4,5 +4,12 @@
 		shopCount : 4,
 		goodsCount : 11,
 	},
-	footsteps : 108
+	footsteps : 108,
+	tabbar:{
+		index : 1,
+		tiny : 2,
+		commity : 3,
+		carrgo: 4,
+		my : 0
+	}
 }
