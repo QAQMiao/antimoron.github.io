@@ -27,5 +27,40 @@ categories: javascript
 扩充了[鼠标和用户界面事件](http://www.w3school.com.cn/jsref/met_button_click.asp)、范围、遍历（迭代DOM
 文档的方法）等细分模块，而且通过对象接口增加了对CSS的支持。DOM1级中的DOM核心模块也经过拓展开始支持
 [XML命名空间](http://www.w3school.com.cn/xml/xml_namespaces.asp)。
-	
+		- DOM2级引入了下列新的模块：
+			- DOM视图：定义了跟踪不同文档的视图接口
+			- DOM事件：定义了时间和事件处理的接口
+			- DOM样式：定义了基于CSS为元素应用样式的接口
+			- DOM遍历和范围：定义了遍历和操作文档树的接口
+		- DOM3级则进一步扩充了DOM，新增并引入了
+			- 统一方式加载   在DOM加载和保存模块中定义
+			- 保存文档方法	 在DOM加载和保存模块中定义
+			- 验证文档方法   在DOM验证模块定义
+			- 支持XML1.0规范，涉及[XML Infoset](http://www.w3china.org/translation/infoset_20011024_cn.htm)、
+[XPath](http://www.w3school.com.cn/xpath/)和[XMLBase](http://www.w3china.org/translation/xmlbase20010627_cn.htm).
+		- 可能看到DOM0级的字眼，其实DOM0是不存在的，只是历史中的一个参照点。具体为IE 4.0和Netscape Navigator 4.0最初支持的DHTM
+L.
+	3. 其他DOM标准
+		- 除了DOM核心和DOM HTML接口之外另外几种语言还发布了自己的DOM标准。
+			- SVG 1.0  可伸缩矢量图 通常用作网站图标
+			- MathML 1.0	数学标记语言
+			- SMIL	同步多媒体集成语言
+		- 还有一些语言也开发了自己的DOM实现，例如Mozilla的XUL（XML用户界面语言-->XML + UI）。但是只有上面列出的几种才是W3C的
+推荐标准。
+	4. Web浏览器对DOM的支持
+		
+		| 浏览器 | DOM兼容性 |
+		| ------ | ----- |
+		| IE5.5~IE8 | 1级（几乎全部）|
+		| IE9+ | 1、2、3级 |
+		| Opera 1~6 | 不支持 |
+		| Opera 7~8.x | 1级（几乎全部），2级部分 |
+		| Opera 9~9.9 | 1级、2级（几乎全部），3级部分 |
+		| Opera 10+ | 1、2级，3级（部分） |
+		| Safari 1.0.x | 1级 |
+		| Safari 2+ | 1级、2级（部分） |
+		| Chrome 1+ | 1级、2级（部分） |
+		| Firefox 1+ | 1级、2级（几乎全部）、3级（部分） | 
+
+
 --End.
