@@ -65,17 +65,19 @@ L.
 	5.BOM 浏览器对象模型
 		- BOM没有标准可循，都是各自浏览器做的自己的拓展和实现。
 	6.在HTML中使用javascript
-		- 带有src属性的&lt;script&rt;元素不应该在其&lt;script&rt;和&lt;/script&rt;标签之间再包含额外的js代码，
+		- 带有src属性的&lt;script&gt;元素不应该在其&lt;script&gt;和&lt;/script&gt;标签之间再包含额外的js代码，
 如果包含了嵌入的代码，则只会下载并执行src所指脚本文件，嵌入的代码会被忽略。
 		- script元素的src要格外小心，如果自己的网站域名叫www.my.com，引入了如下的js
-{% highlight javascript %}
+
+{% highlight html %}
 	<script src="badguy.com/badjs.js"></script>
 {% endhighlight %}
 
-		则可能badguy.com域名的所有者恶意修改代码导致安全隐患，因此通常用自己域名下的外部脚本
+		- 则可能badguy.com域名的所有者恶意修改代码导致安全隐患，因此通常用自己域名下的外部脚本
 或者使用被信任的域名所有者的域名下的文件。
 		- 按照惯例，所有的script元素都在head元素中，这种会导致网页打开前要等待所有的脚本加载
 完成才行，为了提升加载速度，现在的程序员通常把script标签放在body标签中。如：
+
 {% highlight html %}
 <html>
 	<head>
@@ -93,6 +95,7 @@ L.
 		- 延迟脚本defer
 			- 通过设定script元素的defer属性defer="defer"来使脚本延迟到整个页面都解析完毕再
 运行。因此在script元素中设置defer属性相当于告诉浏览器立即下载，但延迟执行。
+
 {% highlight html %}
 <html>
 	<head>
@@ -108,6 +111,7 @@ L.
 		- 异步脚本
 			- 与defer类似，async只适用于外部脚本文件，并告诉浏览器立即下载文件。但与defer不同
 ，标记了async属性的script元素并部保证按照它们的先后顺序执行。
+
 {% highlight html %}
 <html>
 <head>
