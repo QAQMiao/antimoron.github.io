@@ -65,7 +65,7 @@ L.
 	5.BOM 浏览器对象模型
 		- BOM没有标准可循，都是各自浏览器做的自己的拓展和实现。
 	6.在HTML中使用javascript
-		- 带有src属性的<script>元素不应该在其&lt;script&rt;和&lt;/script&rt;标签之间再包含额外的js代码，
+		- 带有src属性的&lt;script&rt;元素不应该在其&lt;script&rt;和&lt;/script&rt;标签之间再包含额外的js代码，
 如果包含了嵌入的代码，则只会下载并执行src所指脚本文件，嵌入的代码会被忽略。
 		- script元素的src要格外小心，如果自己的网站域名叫www.my.com，引入了如下的js
 {% highlight javascript %}
@@ -101,7 +101,7 @@ L.
 </html>
 {% endhighlight %}
 
-			- ** HTML5规范要求脚本必须按照他们出现的先后顺序执行，支持H5的浏览器会忽略这个属性**
+			- ** HTML5规范要求脚本必须按照他们出现的先后顺序执行，支持H5的浏览器会忽略这个属性 **
 因此第一个延迟脚本会先于第二个延迟脚本执行，而这两个脚本会先于DOMContentLoaded事件（[DOM内容加载事件]以后介
 绍）执行。而实际上，延迟脚本并不一定会按照顺序执行，也不一定会再DOMContentLoaded时间触发前执行，因此最好
 只包含一个延迟脚本。
