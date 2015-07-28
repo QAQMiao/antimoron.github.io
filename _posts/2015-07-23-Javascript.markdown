@@ -68,36 +68,39 @@ L.
 		- 带有src属性的<script>元素不应该在其<script>和</script>标签之间再包含额外的js代码，
 如果包含了嵌入的代码，则只会下载并执行src所指脚本文件，嵌入的代码会被忽略。
 		- script元素的src要格外小心，如果自己的网站域名叫www.my.com，引入了如下的js
-		{% highlight javascript %}
-			<script src="badguy.com/badjs.js"></script>
-		{% endhighlight %}
+{% highlight javascript %}
+	<script src="badguy.com/badjs.js"></script>
+{% endhighlight %}
+
 		则可能badguy.com域名的所有者恶意修改代码导致安全隐患，因此通常用自己域名下的外部脚本
 或者使用被信任的域名所有者的域名下的文件。
 		- 按照惯例，所有的script元素都在head元素中，这种会导致网页打开前要等待所有的脚本加载
 完成才行，为了提升加载速度，现在的程序员通常把script标签放在body标签中。如：
-		{% highlight html %}
-		<html>
-			<head>
-				<title>Example</title>
-			</head>
-			<body>
-				<script src="example1.js"></script>
-				<script src="example2.js"></script>
-			</body>
-		</html>
-		{% endhighlight %}
+{% highlight html %}
+<html>
+	<head>
+		<title>Example</title>
+	</head>
+	<body>
+		<script src="example1.js"></script>
+		<script src="example2.js"></script>
+	</body>
+</html>
+{% endhighlight %}
+
 		这样在解析包含js代码之前页面的内容将会完全呈现在浏览器中，用户也会因为浏览器窗口显示空
 白页面的时间缩短而觉得网页变快了。
 		- 延迟脚本defer
 			- 通过设定script元素的defer属性defer="defer"来使脚本延迟到整个页面都解析完毕再
 运行。因此在script元素中设置defer属性相当于告诉浏览器立即下载，但延迟执行。
-		{% highlight html %}
-		<html>
-			<head>
-				<script defer="defer" src="example.js"></script>
-			</head>
-		</html>
-		{% endhighlight %}
+{% highlight html %}
+<html>
+	<head>
+		<script defer="defer" src="example.js"></script>
+	</head>
+</html>
+{% endhighlight %}
+
 			- **HTML5规范要求脚本必须按照他们出现的先后顺序执行，支持H5的浏览器会忽略这个属性**
 因此第一个延迟脚本会先于第二个延迟脚本执行，而这两个脚本会先于DOMContentLoaded事件（[DOM内容加载事件]以后介
 绍）执行。而实际上，延迟脚本并不一定会按照顺序执行，也不一定会再DOMContentLoaded时间触发前执行，因此最好
@@ -114,6 +117,7 @@ L.
 <body></body>
 </html>
 {% endhighlight %}
+
 		- 因为第二个脚本可能在第一个脚本文件之前执行，因此确保两者之间互不依赖非常重要。指定async
 属性的目的是不让页面等待两个脚本下载和执行，从而异步加载页面其他内容。为此建议异步脚本不要再加载期间修改DOM。
 --End.
