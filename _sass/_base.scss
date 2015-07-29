@@ -197,7 +197,18 @@ pre {
     }
 }
 
-
+/**
+ * Tables
+ */
+table {
+	border:0px;
+	background:#888;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;;
+}
+td {
+	background:#666;
+}
 
 /**
  * Icons
