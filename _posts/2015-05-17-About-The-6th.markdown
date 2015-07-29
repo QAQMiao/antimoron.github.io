@@ -11,7 +11,7 @@ categories: dailyTime
 
 
 {% highlight javascript linenos %}	
-liu666 = "silly B";//变量悬挂HHHHHHH.
+liu666 = "silly B";//变量悬挂HHHHHHH.因为总是作死在前然后再求饶XD
 var liu666;
 {% endhighlight %}
 
