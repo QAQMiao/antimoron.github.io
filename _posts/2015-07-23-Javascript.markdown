@@ -201,7 +201,7 @@ function doSomething() {
 |finally|最终处理异常|
 |return|返回|
 |void|空类型|
-|continue|继续循环|
+|continue|跳出当前继续循环|
 |for|for循环|
 |switch|switch判定|
 |while|while循环|
