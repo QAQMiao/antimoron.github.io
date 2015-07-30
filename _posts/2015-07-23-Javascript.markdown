@@ -185,6 +185,91 @@ function doSomething() {
 虽然分好不是必须的，但是建议任何时候都不要省略。加上分号可以避免很多错误（如不完整的输入），开发人员也可以
 放心地通过删除多余的空格来压缩js代码。加上分号也会在某些情况下增加代码的性能，因为这样解析器就不必再花时间推测应该
 在哪里插入分号了。并且if,else语句当在仅有一行的时候也推荐用花括号括上。
+		* 1.6 关键字和保留字
+
+|关键字|含义|
+|---|---|
+|break|跳出循环|
+|do|执行|
+|instanceof|是否是类型的实例|
+|typeof|获取变量的类型|
+|case|情况|
+|else|否则|
+|new|新建|
+|var|声明变量|
+|catch|捕获异常|
+|finally|最终处理异常|
+|return|返回|
+|void|空类型|
+|continue|继续循环|
+|for|for循环|
+|switch|switch判定|
+|while|while循环|
+|debugger*|[debugger*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)|
+|function|函数|
+|this|当前对象|
+|with|[with](http://904353524-qq-com.iteye.com/blog/1556091)|
+|default|默认情况|
+|if|条件判断|
+|throw|跑出异常|
+|delete|删除对象|
+|in|[in](http://blog.sina.com.cn/s/blog_855dfd9e0101a2w0.html)|
+|try|圈定捕获异常的代码段|
+
+- 
+	- 
+		* js还描述了另外一组不能用作标示符的保留字。尽管这些保留字没有特定的用途，但是他们还有可能在
+将来被用作关键字。下面是所有保留字：
+
+|abstract|enum|int|short|
+|boolean|export|interface|static|
+|byte|extends|long|super|
+|char|final|native|synchronized|
+|class|float|package|throws|
+|const|goto|private|transient|
+|debugger|implements|proteceted|volatile|
+|double|import|public| - |
+
+- 
+	- 
+		*
+			* 第5版把在非严格模式下运行时的保留字缩减为这些：
+				- class,enum,extends,super,const,export,import
+			* 在严格模式下，第5版还对以下保留字施加限制：
+				- implements,package,public,interface,private,static,let,protected,yield
+		* 变量
+			- js的变量是松散类型。就是可以用来保存任何类型的数据，每个变量仅仅是一个用于保存
+值得占位符而已。定义变量时要使用var操作符。不建议写如下代码
+{% highlight javascript %}
+var message = "hi";
+message = 100;//不建议修改变量的类型
+{% endhighlight %}
+- 
+	- 
+		*
+			- 当省略var操作符直接对变量赋值时，则创建一个全局变量。可以写下面的代码
+{% highlight javascript %}
+function test(){
+	message = "hi";//全局变量
+}
+test();
+alert(message);//可以，因为调用过test之后存在了全局变量message，这种做法并不推荐，很容易扰乱作用域
+{% endhighlight %}
+- 
+	- 
+		* 
+			- 严格模式下，不能定义名为ieeval或者arguments的变量，否则导致语法错误
+		* 数据类型
+			- 有5种简单数据类型（基本数据类型fundamental types)：Undefined、Null、Boolean、
+Number和String。还有一种复杂数据类型-Object。本质上是由一组无顺序的Key-Value对组成的。
+		
 
 
---End.
+
+
+
+
+
+
+	
+--End.	
