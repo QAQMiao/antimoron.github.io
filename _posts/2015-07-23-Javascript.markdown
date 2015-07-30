@@ -5,7 +5,7 @@ date:   2015-07-23 09:12:16
 categories: javascript
 ---
 
-这本书的第一张目的为了展示javascript的历史。
+这本书的第一章目的为了展示javascript的历史。
 
 - 基础知识：
 
