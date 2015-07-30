@@ -232,7 +232,7 @@ function doSomething() {
 
 - 
 	- 
-		*
+		* 
 			* 第5版把在非严格模式下运行时的保留字缩减为这些：
 				- class,enum,extends,super,const,export,import
 			* 在严格模式下，第5版还对以下保留字施加限制：
