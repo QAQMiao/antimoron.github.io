@@ -262,8 +262,44 @@ alert(message);//可以，因为调用过test之后存在了全局变量message�
 		* 数据类型
 			- 有5种简单数据类型（基本数据类型fundamental types)：Undefined、Null、Boolean、
 Number和String。还有一种复杂数据类型-Object。本质上是由一组无顺序的Key-Value对组成的。
-		
+		* typeof 操作符
+			- 对于一个值使用typeof操作符可能返回下列某个字符串：
+				- "undefined" 如果这个值未定义
+				- "boolean" 如果这个值是布尔值
+				- "string" 如果这个值是字符串
+				- ”number“ 如果这个值是数值
+				- ”object“ 如果这个值是对象或者null
+				- "function" 如果这个值是函数
+{% highlight javascript lineno %}
+var message = "";
+alert(typeof message); // string
+alert(typeof(message)); // string
+alert(typeof 95);// number
+{% endhighlight %}		
 
+- 
+	- 
+		- 
+			- typeof操作符的操作参数可以是变量，也可以是直接量（[literal](http://www.cnblogs.com/snandy/p/3439790.html)).从技术角度讲，函数（function）在JS中是对象，不是一个数据类型。然而函数也确实有一些特殊的属性，因此通过typeof操作符来区分函数和其他对象是有必要的。
+		- Undefined 类型
+			- Undefined类型的值只有一个就是undefined.(注意大小写都分别是啥)。在使用var声明变量但未初始化时这个变量的值就是undefined.
+			- 在非严格模式下未申明的变量为undefined.严格模式下会报错。
+		- 对于所有的值都最好显示地初始化```var a=123;```保证写下等号。这样的话在复杂的工程代码中使用typeof如果为undefined那么这个值只可能是未定义，方便调试。
+		- Null类型
+			- Null类型只有一个值，是null。typeof null会返回"object".
+			- 如果定义的变量准备在将来用于保存对象则应初始化为null而不是其他的值。```null == undefined```为true。```null === undefined```为false。说明undefined值是派生自null的。
+		- Boolean类型
+			- 只有true和false两个值。与数字不同，true不一定为1，false不一定为0.
+			- 可以用```Boolean(xxx)```来将变量转化为Boolean类型，结果如下表。
+|数据类型|转换为true的值|转换为false的值|
+|---|---|---|
+|Boolean|true|false|
+|String|任何非空字符串|空字符串""|
+|Number|任何非零数字包括无穷大|0或NaN|
+|Object|任何对象|null|
+|Undefined|n/a(不适用)|undefined|
+
+		
 
 
 
