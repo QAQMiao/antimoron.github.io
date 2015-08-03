@@ -294,14 +294,13 @@ alert(typeof 95);// number
 		- Boolean类型
 			- 只有true和false两个值。与数字不同，true不一定为1，false不一定为0.
 			- 可以用```Boolean(xxx)```来将变量转化为Boolean类型，结果如下表。
-
-|数据类型|转换为true的值|转换为false的值|
-|---|---|---|
-|Boolean|true|false|
-|String|任何非空字符串|空字符串""|
-|Number|任何非零数字包括无穷大|0或NaN|
-|Object|任何对象|null|
-|Undefined|n/a(不适用)|undefined|
+				|数据类型|转换为true的值|转换为false的值|
+				|---|---|---|
+				|Boolean|true|false|
+				|String|任何非空字符串|空字符串""|
+				|Number|任何非零数字包括无穷大|0或NaN|
+				|Object|任何对象|null|
+				|Undefined|n/a(不适用)|undefined|
 
 		
 
