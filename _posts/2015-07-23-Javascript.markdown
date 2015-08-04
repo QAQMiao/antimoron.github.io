@@ -301,7 +301,7 @@ alert(typeof 95);// number
 				|String|任何非空字符串|空字符串""|
 				|Number|任何非零数字包括无穷大|0或NaN|
 				|Object|任何对象|null|
-				|Undefined|n/a(不适用)|undefined|
+				|Undefined|n/a(not applicable)|undefined|
 
 		
 
