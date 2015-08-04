@@ -306,9 +306,11 @@ alert(typeof 95);// number
 		- Number类型
 			- Number类型应该是JS中最令人关注的类型了，使用IEEE754
 			- 十进制 ```var intNum = 55;```
-			- 在严格模式下无效的八进制 ```var octalNum1 = 070//8进制的56```
+			- 八进制 ```var octalNum1 = 070//8进制的56```
+			- 无效的八进制 
 				- ```var octalNum2=079//因为9比7大，无效的8进制数，解析成79```
 				- ```var octalNum3=08//同样无效，解析为8```
+			- 在严格模式下八进制无效```var octalNum1 = 070//报错```
 			- 十六进制字面值的前两位必须0x,后面同c语言语法。
 		- 浮点数
 			- 不推荐省略小数点前或者小数点后的内容如```.1==0.1```
@@ -322,13 +324,14 @@ alert(typeof 95);// number
 		- NaN
 			- Not a Number
 			- 任何涉及NaN的操作都会返回NaN，包括NaN参与的数学运算等
+			- 0除以0会返回NaN
 			- NaN与任何值都不相等，包括NaN自己
 			- isNaN函数用于判定是否为NaN并且函数参数会先尝试转换为数值
 				{% highlight javascript %}
 				isNaN(NaN)//true 。。。
 				isNaN("10")//false 可以转为数
 				isNaN("blue")//true 不能转换为数
-				isNaN(true)//true boolean可以转为整数
+				isNaN(true)//false boolean可以转为整数
 				{% endhighlight %}
 
 			- 转换数值方法
