@@ -303,8 +303,43 @@ alert(typeof 95);// number
 				|Object|任何对象|null|
 				|Undefined|n/a(not applicable)|undefined|
 
-		
+		- Number类型
+			- Number类型应该是JS中最令人关注的类型了，使用IEEE754
+			- 十进制 ```var intNum = 55;```
+			- 在严格模式下无效的八进制 ```var octalNum1 = 070//8进制的56```
+				- ```var octalNum2=079//因为9比7大，无效的8进制数，解析成79```
+				- ```var octalNum3=08//同样无效，解析为8```
+			- 十六进制字面值的前两位必须0x,后面同c语言语法。
+		- 浮点数
+			- 不推荐省略小数点前或者小数点后的内容如```.1==0.1```
+			- 当小数点后没有内容或者为0时浮点数被转换为整型
+			- 过大数的可以使用科学技术法表示```3.14e5==314000```
+			- 最高精度17位小数。但是计算时精度远远不如整数
+		- 数据范围
+			- 最小有效数值被保存在Number.MIN_VALUE
+			- 最大有效数值为Number.MAX_VALUE
+			- 如果计算结果超过这两个范围，正数则自动转化为Infinity(无穷)或负数变为-Infinity(负无穷）。
+		- NaN
+			- Not a Number
+			- 任何涉及NaN的操作都会返回NaN，包括NaN参与的数学运算等
+			- NaN与任何值都不相等，包括NaN自己
+			- isNaN函数用于判定是否为NaN并且函数参数会先尝试转换为数值
+				{% highlight javascript %}
+				isNaN(NaN)//true 。。。
+				isNaN("10")//false 可以转为数
+				isNaN("blue")//true 不能转换为数
+				isNaN(true)//true boolean可以转为整数
+				{% endhighlight %}
 
+			- 转换数值方法
+				- Number() 
+					- 如果要将Boolean转化，true为1false为0.
+					- null返回0
+					- undefined 返回NaN
+					- 只包含数字的字符串会被转为十进制，前导零忽略，十六进制格式的字符串转为对应数值。字符串为空转为0，包含上述格式之外的字符转为NaN
+					- 如果是Object则调用valueOf()，尝试转换，如果得到NaN则调用对象的toString()方法，然后再按字符串的转换规则得到结果。
+				- parseInt() 
+				- parseFloat() 
 
 
 
