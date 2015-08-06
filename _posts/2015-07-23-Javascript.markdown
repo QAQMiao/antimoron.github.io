@@ -409,14 +409,18 @@ for(xx in x) console.log(xx);
 			- label语句
 				- 在代码中添加标签以便将来使用.(C语言的标签类似)
 					
-					```javascript
+					{% highlight javascript %}
 					for(var i =0 ; i < 1000 ;i++) {
 						if(i == 3) continue outside;
 						if(i == 2) break outside;
 					}
 					outside: 
-					```	
+					{% endhighlight %}
 				
+- 
+	- 
+		- 
+			- 
 				- 这样使用标签
 			- break和continue语句
 				- 常规用法与C语言一致。
