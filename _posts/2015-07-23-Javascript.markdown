@@ -334,6 +334,9 @@ alert(typeof 95);// number
 				isNaN(true)//false boolean可以转为整数
 				{% endhighlight %}
 
+- 
+	- 
+		- 
 			- 转换数值方法
 				- Number() 
 					- 如果要将Boolean转化，true为1false为0.
