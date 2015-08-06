@@ -377,10 +377,10 @@ obj.haha = "666"; // 对于没有的属性调用时会对其添加，但是不�
 {% endhighlight %}
 - 
 	- 
-		- 
+		-  
 			- 
 				- 
-					-
+					- 
 						- hasOwnProperty(propertyName)用于检查在当前实例中是否存在给定的属性。（而不是实例的原形）参数必须以字符串指定
 						- isPrototypeOf(object) 用于检查传入的对象是否是另一个对象的原型
 						- propertyIsEnumerable(propertyName)用于检查给定的属性是否能够使用for-in循环来枚举，参数必须以字符串指定
