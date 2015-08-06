@@ -409,13 +409,13 @@ for(xx in x) console.log(xx);
 			- label语句
 				- 在代码中添加标签以便将来使用.(C语言的标签类似)
 					
-					{% highlight javascript %}
-					for(var i =0 ; i < 1000 ;i++) {
-						if(i == 3) continue outside;
-						if(i == 2) break outside;
-					}
-					outside: 
-					{% endhighlight %}
+{% highlight javascript %}
+for(var i =0 ; i < 1000 ;i++) {
+	if(i == 3) continue outside;
+	if(i == 2) break outside;
+}
+outside: 
+{% endhighlight %}
 				
 - 
 	- 
