@@ -353,16 +353,79 @@ alert(typeof 95);// number
 					- parseFloat的规则类似
 					- 解析时遇到第一个小数点有效，第二个就无效了，后面的字符串会被忽略。
 					- 可以解析parseInt的所有格式，但是没有第二个参数指定进制数。
-			- String
+			- String类型
 					- 用单引号的字符串是有效的：'123'
 					- 用双引号的字符串是有效的："123"
 					- 在双引号中引用单引号是有效的："123'x''xxxx'"
 					- 字符串拼接一般用加法var msg = "MiaoMiao" + "love"
-						 
+					- 转换为字符串的方式：
+						- 使用几乎每个值都有的toString()方法。数值、布尔值、对象和字符串值都有toString方法，但是null和undefined没有这个方法（NaN也有，chrome下返回"NaN" 我去试过了）
+							- 对于Number调用toString可以传递一个参数表示转化为几进制的字符串。
+						- 使用String()，可以转换null为"null"，undefined为“undefined”
+			- Object类型
+				- 对象是一组数据和功能的集合。对象可以通过执行new操作符来进行创建（和C++的new用法一样）
+				- 对象的每个实例都有下列属性和方法
+					- Constructor 保存着用于创建当前对象的函数。Object而言构造函数就是Object()
+					- Object可以动态添加一个孩子，如：
 
+{% highlight javascript %}
+var obj = new Object();
+obj.haha = "666"; // 对于没有的属性调用时会对其添加，但是不会改变Object类型本身的定义，只影响到了这个实例
+{% endhighlight %}
+- 
+	- 
+		- 
+			- 
+				- 
+					-
+						- hasOwnProperty(propertyName)用于检查在当前实例中是否存在给定的属性。（而不是实例的原形）参数必须以字符串指定
+						- isPrototypeOf(object) 用于检查传入的对象是否是另一个对象的原型
+						- propertyIsEnumerable(propertyName)用于检查给定的属性是否能够使用for-in循环来枚举，参数必须以字符串指定
+						- toLocalString() 返回对象的字符串表示，对国家语言有处理。【中东字拿到中国的电脑上可能显示成凌乱的汉子，本地化后会做对应的转化显示正确的字符】
+						- toString() 返回字符串表示
+						- valueOf() 返回对象的字符串、数值和布尔值表示。通常与toString()返回值相同。
+					- ECMAScript中的object是所有对象的基础，因此所有对象都具有这些基本的属性和方法。
+			- 操作符
+				- 与c语言一致，部分Infinity和NaN还有0的规则使用中再做判断。
+			- for-in语句
+				- for-in语句是一种精准的迭代语句，可以用来枚举对象的属性。
+					- 格式如：for(property in expression) statement
+				- 下面是示例：
+{% highlight javascript %}
+var x = {xx:"123" , wocao:456 }; 
+for(var xx in x) console.log( xx);
+for(xx in x) console.log(xx);
+{% endhighlight %}
 
-
-
-
+- 
+	- 	
+		- 
+			- 
+				- 但是要迭代的对象变为null或者undefined，for-in语句就会抛出错误。ECMA5则
+对这一行为进行更新：不再抛出错误而只是不执行循环体。在使用for-each之前先检测对象的值是不是null或者undefined吧。。
+			- label语句
+				- 在代码中添加标签以便将来使用.(C语言的标签类似)
+					
+					```javascript
+					for(var i =0 ; i < 1000 ;i++) {
+						if(i == 3) continue outside;
+						if(i == 2) break outside;
+					}
+					outside: 
+					```	
+				
+				- 这样使用标签
+			- break和continue语句
+				- 常规用法与C语言一致。
+				- 配合标签来打破嵌套循环。
+			- switch语句
+				- 与c语言一致（这边看一遍实在没有费精力打字的必要 囧rz）
+				- 与其他语言稍微不同的是：Js可以在switch括号中使用任何数据类型
+				- 每个case的值不一定是常量，还可以是变量、表达式。
+			- 函数
+				- 函数从实现上讲是对象，然而又与常规对象有不同，因此类型单独区分开。
+				- 函数的定义如：function functionName(arg0,arg1,...){xxx}
+				- 调用方式与C语言类似。
+			
 	
 --End.	
