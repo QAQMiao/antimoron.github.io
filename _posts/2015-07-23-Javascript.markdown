@@ -357,14 +357,14 @@ alert(typeof 95);// number
 					- 解析时遇到第一个小数点有效，第二个就无效了，后面的字符串会被忽略。
 					- 可以解析parseInt的所有格式，但是没有第二个参数指定进制数。
 			- String类型
-					- 用单引号的字符串是有效的：'123'
-					- 用双引号的字符串是有效的："123"
-					- 在双引号中引用单引号是有效的："123'x''xxxx'"
-					- 字符串拼接一般用加法var msg = "MiaoMiao" + "love"
-					- 转换为字符串的方式：
-						- 使用几乎每个值都有的toString()方法。数值、布尔值、对象和字符串值都有toString方法，但是null和undefined没有这个方法（NaN也有，chrome下返回"NaN" 我去试过了）
-							- 对于Number调用toString可以传递一个参数表示转化为几进制的字符串。
-						- 使用String()，可以转换null为"null"，undefined为“undefined”
+				- 用单引号的字符串是有效的：'123'
+				- 用双引号的字符串是有效的："123"
+				- 在双引号中引用单引号是有效的："123'x''xxxx'"
+				- 字符串拼接一般用加法var msg = "MiaoMiao" + "love"
+				- 转换为字符串的方式：
+					- 使用几乎每个值都有的toString()方法。数值、布尔值、对象和字符串值都有toString方法，但是null和undefined没有这个方法（NaN也有，chrome下返回"NaN" 我去试过了，我也试过了0.0）
+					- 对于Number调用toString可以传递一个参数表示转化为几进制的字符串。
+					- 使用String()，可以转换null为"null"，undefined为“undefined”
 			- Object类型
 				- 对象是一组数据和功能的集合。对象可以通过执行new操作符来进行创建（和C++的new用法一样）
 				- 对象的每个实例都有下列属性和方法
