@@ -56,4 +56,44 @@ alert(myconcat("1","a","2","b"));
 - 严格模式对arguments有一定限制，不可以通过arguments对其进行值得修改，其次重写arguments的值会导致
 语法错误。
 
+## 没有重载
+
+ECMASript函数不能像传统意义上那样实现重载。如果再ECMAScript中定义了两个名字相同的函数，则名字只属于
+后定义的函数
+{% highlight javascript %}
+function addSomeNumber(num) {
+  return num + 100;
+}
+function addSomeNumber(num) {
+  return num + 200;
+}
+alert(addSomeNumber(100)); //300
+{% endhighlight %}
+
+通常通过检查传入函数中参数的类型和数量做出不同的反应可以模仿方法的重载。
+
+# 变量、作用于、和存储空间的问题
+
+## 基本类型和引用类型的值
+
+ECMAScript变量可能包含两种不同数据类型的值：基本类型值和引用类型值。基本类型值指的是简单的数据段，而
+引用类型值指那些可能由多个值构成的对象。
+
+在将一个值赋值给变量时，解析器必须确定这个值是基本类型值还是引用类型值。基本数据类型：
+
+- Undefined
+- Null
+- Boolean
+- Number
+- String
+
+这5种基本数据类型是按值访问的。因为可以保存在变量中的实际的值。
+
+引用类型的值是保存在内存中的对象，js不允许直接访问内存中的位置。也就是说不能直接操作对象的内存空间，
+在操作对象时，实际上是在操作对象的引用而不是实际的对象。引用类型因此是按照引用访问的。(function和object)
+
+## 动态属性
+
+定义基本类型和引用类型值的方式是类似:创建一个变量并为该变量赋值。
+
 -- End.
