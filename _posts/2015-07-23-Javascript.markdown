@@ -384,7 +384,7 @@ obj.haha = "666"; // 对于没有的属性调用时会对其添加，但是不�
 						- hasOwnProperty(propertyName)用于检查在当前实例中是否存在给定的属性。（而不是实例的原形）参数必须以字符串指定
 						- isPrototypeOf(object) 用于检查传入的对象是否是另一个对象的原型
 						- propertyIsEnumerable(propertyName)用于检查给定的属性是否能够使用for-in循环来枚举，参数必须以字符串指定
-						- toLocalString() 返回对象的字符串表示，对国家语言有处理。【中东字拿到中国的电脑上可能显示成凌乱的汉子，本地化后会做对应的转化显示正确的字符】
+						- toLocalString() 返回对象的字符串表示，对国家语言有处理。【中东字拿到中国的电脑上可能显示成凌乱的汉字，本地化后会做对应的转化显示正确的字符】
 						- toString() 返回字符串表示
 						- valueOf() 返回对象的字符串、数值和布尔值表示。通常与toString()返回值相同。
 					- ECMAScript中的object是所有对象的基础，因此所有对象都具有这些基本的属性和方法。
@@ -410,11 +410,11 @@ for(xx in x) console.log(xx);
 				- 在代码中添加标签以便将来使用.(C语言的标签类似)
 					
 {% highlight javascript %}
+outside: 
 for(var i =0 ; i < 1000 ;i++) {
 	if(i == 3) continue outside;
 	if(i == 2) break outside;
 }
-outside: 
 {% endhighlight %}
 				
 - 
