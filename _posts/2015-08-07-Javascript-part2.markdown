@@ -53,6 +53,7 @@ alert(myconcat("1","a","2","b"));
 字符串并把它们连接在一起。
 
 同时arguments的对应位置的元素永远与对应的形参一致。
+
 - 严格模式对arguments有一定限制，不可以通过arguments对其进行值得修改，其次重写arguments的值会导致
 语法错误。
 
