@@ -95,6 +95,77 @@ ECMAScript变量可能包含两种不同数据类型的值：基本类型值和�
 
 ## 动态属性
 
-定义基本类型和引用类型值的方式是类似:创建一个变量并为该变量赋值。
+定义基本类型和引用类型值的方式是类似:创建一个变量并为该变量赋值。但是，当这个值保存到变量之中
+后，对不同类型值可以执行的操作则大相径庭。对于引用类型的值，我们可以为其添加属性和方法，也可以改变和删除其属性和方法
+
+{% highlight javascript %}
+var person = new Object();
+person.name = "hh";
+alert(person.name); //直接创建了域name。并保存了值
+{% endhighlight %}
+
+以上代码创建了一个对象并将其保存在了变量person中。然后我们为该对象添加了一个名为name的属性，
+并将字符串值赋值给了这个属性。但是我们不能给基本类型的值添加属性，尽管不会导致错误。
+
+{% highlight javascript %}
+var name = "xxx";
+name.age = 27;
+alert(name.age); //undefined.
+{% endhighlight %}
+
+### 复制变量值
+
+除了保存的方式不同之外，在从一个变量向另一个变量复制基本类型值和引用类型值时，也存在不同。
+如果从一个变量向另一个变量赋值基本类型的值，会在变量对象上创建一个新值，然后把该值复制到为
+新变量分配的位置上。
+
+{% highlight javascript %}
+var num1 = 5;
+var num2 = num1;
+{% endhighlight %}
+
+当从一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值赋值一份放到为新变量
+分配的空间中。不同的是，这个值得副本其实是一个指针。（指针所指地址是一个值，这个指针的赋值
+是值复制，但是表现得结果却是一个引用传递。）
+
+{% highlight javascript %}
+var obj1=new Object();
+var obj2=obj1;
+obj1.name="hh";
+alert(obj2.name); //"hh"
+{% endhighlight %}
+
+### 传递参数
+ECMAScript中所有函数的参数都是按照值传递的，把函数外部的值复制给函数内部的参数，就喝把值
+从一个变量复制到另一个变量一样。基本类型值得传递如同基本类型变量的复制一样，而引用类型值
+得传递，则如同引用类型变量的复制一样。基本类型的传递如同基本类型变量的复制一样，而引用类型
+值得传递，则如同引用复制一样。
+（形参的传递与赋值所选用的方式一直）
+
+{% highlight javascript %}
+function addTen(num){
+   num += 10;
+   return num;
+}
+var count = 20;
+var result = addTen(count);
+alert(count);//20 不是引用，count的值没有变化
+alert(result);//30
+{% endhighlight %}
+
+上面的类型是值传递。
+
+{% highlight javascript %}
+function setName(obj){
+  obj.name="haha";
+}
+var person = new Object();
+setName(person);
+alert(person.name); //"haha"
+{% endhighlight %}
+
+上面的类型是引用传递。
+
+
 
 -- End.
